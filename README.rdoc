@@ -1,4 +1,4 @@
-= Serve - Easy ERB, Haml, and Sass
+= [Do not use gbissett's fork of] Serve - Easy ERB, Haml, and Sass
 
 link:../../downloads/jlong/serve/logo-hifi-3.png
 

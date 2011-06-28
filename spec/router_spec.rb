@@ -25,6 +25,10 @@ describe Serve::Router do
     resolve('directory/').should == 'directory/index.html'
   end
   
+  it 'should resolve references to html files to haml if html does not exist' do
+    resolve('foo.html').should == 'foo.haml'
+  end
+
   it 'should resolve references to css files to sass if css does not exist' do
     resolve('stylesheets/application.css').should == 'stylesheets/application.sass'
   end

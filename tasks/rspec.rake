@@ -10,4 +10,4 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
 end
 
 # Check dependencies before running specs
-task :spec => :check_dependencies
+#task :spec => :check_dependencies

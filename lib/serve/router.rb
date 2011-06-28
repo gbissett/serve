@@ -17,6 +17,10 @@ module Serve
       when File.directory?(full_path) 
         # It's a directory? Try a directory index.
         resolve(root, File.join(path, 'index'))
+      when path.ends_with?('.html')
+        # We probably want haml
+        haml_path = path.sub(/\.html\Z/, '.haml')
+        return haml_path if File.file?(File.join(root, haml_path))
       when path.ends_with?('.css')
         # CSS not found? Try SCSS or Sass.
         alternates = %w{.scss .sass}.map { |ext| path.sub(/\.css\Z/, ext) }
